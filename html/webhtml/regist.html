@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta content="telephone=no" name="format-detection">
+    <title>注册</title>
+    <link rel="stylesheet" href="../../libs/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+    <script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="loginBody">
+	<div class="login">
+		<div class="header">
+		    <a class="h_back"></a>
+		    <h3>注册</h3>
+		</div>
+		<div class="loginCon registCon">
+			<form class="loginForm">
+				<div class="mui-input-row rname flex"><i></i><input class="mui-input-clear flex1 " type="text" placeholder="请输入真实姓名"/></div>
+				<div class="rcard flex"><i></i><input class="flex1" type="text" placeholder="请输入身份证号码"/></div>
+				<div class="lphone flex"><i></i><input class="flex1" type="text" placeholder="请输入手机号"/></div>
+				<div class="rcode flex"><i></i><input class="flex1" type="text" placeholder="请输入验证码"/><span>获取验证码</span></div>
+				<div class="lpsd flex"><i></i><input class="flex1" type="password" placeholder="请输入密码"/></div>
+				<div class="lpsd flex"><i></i><input class="flex1" type="password" placeholder="请确认密码"/></div>
+				<div class="rinvitate flex"><i></i><input class="flex1" type="text" placeholder="请输入邀请码（选填项）"/><span>邀请人</span></div>
+				<a class="loginBtn" href="login.html">提交</a>
+			</form>
+			<div class="agreen"><i class="agreenIcon active"></i>同意<a href="regist_xieyi.html">《会员消费协议书》</a></div>
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript" src="../../libs/mui/js/mui.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		/*注册页面协议是否同意切换*/   
+		$(".agreenIcon").on("click",function(){
+			$(this).toggleClass("active");
+		});
+	});
+</script>
+</html>

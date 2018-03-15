@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta content="telephone=no" name="format-detection">
+    <title>我的分享</title>
+    <link rel="stylesheet" href="../../libs/mui/css/mui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+    <script type="text/javascript" src="../../libs/touchSlider.js"></script>
+</head>
+<body class="IndexBody shareBody">
+	<!--头部-->
+    <div class="header">
+    	<a class="h_back" href="perCenter.html"></a>
+	    <h3>我的分享</h3>
+	    <a class="h_delete" href="perShareDetail.html">分享明细</a>
+	</div>
+	<div class="shareBox">
+		<img class="shareBg" src="../../images/static/shareBg.png"/>
+		<div class="shareCode">
+			<span>我的二维码</span>
+			<img src="../../images/testimg/shareCode.png"/>
+		</div>
+	</div>
+	<div class="shareLink">
+		<div class="shareLinkBox">
+			<span class="shareLinkTit">我的邀请码</span>
+			<div class="shareLinkDiv flex"><input class="flex1" type="text" /><a>复制</a></div>
+		</div>
+		<div class="shareLinkBox">
+			<span class="shareLinkTit">我的邀请链接</span>
+			<div class="shareLinkDiv flex"><input class="flex1" type="text" /><a>复制</a></div>
+		</div>
+		<div class="shareBtnBox">
+			<a>立即分享</a>
+		</div>
+	</div>
+	<div class="shareRule">
+		<div class="shareRuleTit">
+			<span class="shareRuleTitX"></span><label class="shareRuleTitM">邀请规则</label><span class="shareRuleTitX"></span>
+		</div>
+		<p class="shareRuleCon flex"><label>1、</label><span class="flex1">成功分享给你的朋友，你即可的每单五元的奖励</span> </p>
+		<p class="shareRuleCon flex"><label>2、</label><span class="flex1">如果你的朋友又成功分享给了你朋友的朋友，你即可获得 三元的奖励，你的朋友可以获得五元的奖励</span> </p>
+		<p class="shareRuleCon flex"><label>3、</label><span class="flex1">只要被分享者持续消费、你的分享奖励也将一直持续，分享奖励金额满100元可提现。</span></p>
+	</div>
+	<!--分享-->
+	<div class="goodsShowBg"></div>
+	<div class="shareIconBox">
+		<p class="shareP">分享至站外：</p>
+		<ul>
+			<li class="flex">
+				<a class="flex1">
+					<i class="shareIcon shareIcon1"></i>
+					<span>腾讯微博</span>
+				</a>
+				<a class="flex1">
+					<i class="shareIcon shareIcon2"></i>
+					<span>微信好友</span>
+				</a>
+				<a class="flex1">
+					<i class="shareIcon shareIcon3"></i>
+					<span>QQ空间</span>
+				</a>
+				<a class="flex1">
+					<i class="shareIcon shareIcon4"></i>
+					<span>QQ好友</span>
+				</a>
+				<a class="flex1">
+					<i class="shareIcon shareIcon5"></i>
+					<span>新浪微博</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="../../libs/mui/js/mui.min.js"></script> 
+	<script type="text/javascript">
+		$(function(){
+			$(".cartCheck").on("click",function(){
+				$(this).toggleClass("on");
+			});
+			
+			/*点击出现分享按钮*/
+			$(".shareBtnBox a").on("click",function(){
+				$(".goodsShowBg").css({display:"inline-block",transition: "display 0.5s"});
+				$(".shareIconBox").css({"bottom":0,transition: "bottom 0.5s"})
+			});
+			$(".goodsShowBg").on("click",function(){
+				$(".goodsShowBg").css({display:"none",transition: "display 0.5s"});
+				$(".shareIconBox").css({"bottom":"-150px",transition: "bottom 0.5s"})
+			});
+			
+			
+			
+		});
+		
+	</script>
+</body>
+</html>

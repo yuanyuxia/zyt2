@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta content="telephone=no" name="format-detection">
+    <title>充值到银行卡</title>
+    <link rel="stylesheet" href="../../libs/mui/css/mui.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/mui/css/mui.picker.min.css" />
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+    <script type="text/javascript" src="../../js/base.js"></script>
+</head>
+<body class="fpsdBody">
+	<div class="header">
+		<a class="h_back"></a>
+	    <h3>充值到银行卡</h3>
+	</div>
+	<div class="detailBox">
+		<form>
+			<ul class="detailUl marginTop">
+				<li>
+					<a class="agentTit rechargeA flex flexmid">
+						<h3>收款账户</h3>
+		            </a>
+				</li>
+				<li>
+					<a class="detailA flex flexmid">
+		                <span class="detailSpan">收款账号</span>
+		                <p class="detailP flex1"><input  class="detailInp" type="text" placeholder="6228 2365 2541 563"></p>
+		            </a>
+				</li>
+				<li>
+		            <a class="detailA flex flexmid">
+		                <span class="detailSpan">收款银行</span>
+		                <label class="detailP flex1"><img  class="rechargeImg" src="../../images/static/icons/icon_gongshang.png"/></label>
+		                <small class="bankName">中国工商银行</small>
+		                <!--<input  class="detailBankInp" type="text" value="中国工商银行" readonly>-->
+		            </a>
+				</li>
+				<li>
+					<a class="detailA flex flexmid detailABottom">
+		                <span class="detailSpan">收款人</span>
+		                <p class="detailP flex1"><input  class="detailInp" type="text" placeholder="*利亚"></p>
+		            </a>
+				</li>
+			</ul>
+			<ul class="detailUl marginTop">
+				<li>
+					<a class="agentTit rechargeA flex flexmid">
+						<h3>订单详情</h3>
+		            </a>
+				</li>
+				<li>
+					<a class="detailA flex flexmid">
+		                <span class="detailSpan">充值金额</span>
+		                <p class="detailP flex1"><input  class="detailInp" type="text" placeholder="188元"></p>
+		            </a>
+				</li>
+				<li>
+					<a class="detailA flex flexmid">
+		                <span class="detailSpan">姓名</span>
+		                <p class="detailP flex1"><input  class="detailInp" type="text" placeholder="张三"></p>
+		            </a>
+				</li>
+				<li>
+					<a class="detailA flex flexmid detailABottom">
+		                <span class="detailSpan">充值账号</span>
+		                <p class="detailP flex1"><input  class="detailInp" type="text" placeholder="13426787798"></p>
+		            </a>
+				</li>
+			</ul>
+			<ul class="detailUl marginTop">
+				<!--<li>
+					<a class="detailA flex flexmid">
+		                <span class="detailSpan">支付金额</span>
+		                <p class="detailP flex1"><input  class="detailInp" type="text" placeholder="请输入金额"></p>
+		                <i class="detailI"></i>
+		            </a>
+				</li>-->
+				<li>
+					<a class="detailA flex flexmid rechargeFS" href="finaSelectStyle.html" >
+		                <span class="detailSpan">支付方式</span>
+		                <p class="detailP flex1"><input  class="detailInp" type="text" placeholder="请选择支付方式"></p>
+		                <i class="detailI"></i>
+		            </a>
+				</li>
+				<li>
+					<a class="detailA flex flexmid">
+		                <span class="detailSpan">支付账号</span>
+		                <p class="detailP flex1"><input  class="detailInp" type="text" placeholder="6228 2365 2541 563"></p>
+		                <i class="detailI"></i>
+		            </a>
+				</li>
+				<li>
+					<a class="detailA flex flexmid">
+		                <span class="detailSpan">支付姓名</span>
+		                <p class="detailP flex1"><input  class="detailInp" type="text" placeholder="请输入支付姓名"></p>
+		                <i class="detailI"></i>
+		            </a>
+				</li>
+				<li>
+					<a class="detailA flex flexmid detailABottom" id="rechargeDateBox">
+		                <span class="detailSpan">支付时间</span>
+		                <p class="detailP flex1"><input id="rechargeDate"  class="detailInp" type="text" placeholder="请选择支付成功时间"></p>
+		                <i class="detailI"></i>
+		            </a>
+				</li>
+			</ul>
+			<div class="detailBtn"><a class="loginBtn">提交</a></div>
+		</form>
+	</div>
+	<script src="../../libs/mui/js/mui.min.js"></script>
+	<script src="../../libs/mui/js/mui.picker.min.js"></script>
+	<script type="text/javascript">
+		(function($, doc) {
+			$.init();
+			$.ready(function() {
+				/*解决mui默认阻止a标签跳转*/
+				mui('body').on('tap','.rechargeF',function(){document.location.href=this.href;});
+				/*支付时间选择*/
+				showPop.showDate("rechargeDateBox", "rechargeDate");
+			});
+		})(mui, document);
+	</script>
+	
+</body>
+</html>

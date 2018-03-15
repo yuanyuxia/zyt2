@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+	<meta content="telephone=no" name="format-detection">
+	<title>确认订单</title>
+	<link rel="stylesheet" href="../../libs/mui/css/mui.css">
+	<link rel="stylesheet" href="../../css/base.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	<script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../../js/main.js"></script>
+	<script type="text/javascript" src="../../libs/mui/js/mui.min.js"></script>
+</head>
+<body class="IndexBody">
+	<!--头部-->
+	<div class="header">
+		<a class="h_back"></a>
+		<h3>确认订单</h3>
+	</div>
+	<div class="confirmIndent">
+		<div class="indentAdress marginTop">
+			<img class="indentAdressI" src="../../images/static/confirmIndent.png"/>
+			<a class="indentAdressD flex flexmid" href="editAdress.html">
+				<p class="indentAdressDetail flex1">
+					<span>玛利亚 <small>13633563157</small></span>
+					<label class="indentAdressL">郑州市中原区高新区梧桐街玉兰街创业大厦</label>
+					<label class="indentAdressL indentAdressL1 hide">请填写收货地址</label>
+				</p>				
+				<i class="indentAdressN"></i>
+			</a>
+		</div>
+		<a class="indentBox marginTop">
+			<div class="indentBoxSpan1 flex flexmid">
+				<img class="cartImg" src="../../images/testimg/hotscale_pic1.png" />
+				<div class="redwineBox cartTips flex1">
+					<!--<h3>木瓜 新鲜水果 海南红心木瓜 木瓜 新鲜水果 海南红心木瓜木瓜 新鲜水果 海南红心木瓜</h3>-->
+					<h3 class="wineTitle cartTitle">木瓜 新鲜水果 海南红心木瓜 木瓜 新鲜水果 海南红心木瓜木瓜 新鲜水果 海南红心木瓜</h3>
+					<p class="wineTips">5公斤 红芯木瓜</p>
+					<div class="wineAmount clearfix"><label class="fl"><span>155</span>积分</label>
+						<div class="mui-numbox cartN fr"data-numbox-min='0'>
+							<button class="mui-btn mui-btn-numbox-minus muiR" type="button">-</button>
+							<input id="test" class="mui-input-numbox" type="number" value="1" />
+							<button class="mui-btn mui-btn-numbox-plus muiR" type="button">+</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="indentBox indentBox2 flex flexmid">
+				<img class="cartImg" src="../../images/testimg/redwine2.png" />
+				<div class="redwineBox cartTips flex1">
+					<h3 class="wineTitle cartTitle">意大利罗利葡萄干红</h3>
+					<p class="wineTips">红瓶<span class="wineTips2">赠送</span></p>
+					<div class="wineAmount clearfix">
+						<label class="fl"><span>240</span>元</label>
+						<div class="fr">X 1</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		<div class="indentMsg">
+			<!--<textarea placeholder="买家留言：(必填)如果你充值的是燃气费、电费、水电费、电话费、加油卡等，请注明您要充值缴费的账号  (例如:  电话费：张三  13643713157)"></textarea>-->
+			<div class="textarea flex1"  placeholder="买家留言：(必填)如果你充值的是燃气费、电费、水电费、电话费、加油卡等，请注明您要充值缴费的账号  (例如:  电话费：张三  13643713157)"  contenteditable="true"></div>
+		</div>
+		<a class="indentBox marginTop">
+			<div class="indentBoxSpan1 flex flexmid">
+				<img class="cartImg" src="../../images/testimg/redwine1.png" />
+				<div class="redwineBox cartTips flex1">
+					<h3 class="wineTitle cartTitle">木瓜 新鲜水果 海南红心木瓜 木瓜 新鲜水果 海南红心木瓜木瓜 新鲜水果 海南红心木瓜</h3>
+					<p class="wineTips">5公斤 红芯木瓜</p>
+					<div class="wineAmount clearfix">
+						<label class="fl"><span>155</span>积分</label>
+						<div class="mui-numbox cartN fr"data-numbox-min='0'>
+							<button class="mui-btn mui-btn-numbox-minus muiR" type="button">-</button>
+							<input id="test" class="mui-input-numbox" type="number" value="1" />
+							<button class="mui-btn mui-btn-numbox-plus muiR" type="button">+</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="indentBox indentBox2 flex flexmid">
+					<img class="cartImg" src="../../images/testimg/redwine2.png" />
+					<div class="redwineBox cartTips flex1">
+						<h3 class="wineTitle cartTitle">意大利罗利葡萄干红</h3>
+						<p class="wineTips">红瓶<span class="wineTips2">赠送</span></p>
+						<div class="wineAmount clearfix">
+							<label class="fl"><span>240</span>元</label>
+							<div class="fr">X 1</div>
+						</div>
+					</div>
+				</div>
+		</a>
+		<div class="indentMsg">
+			<!--<textarea placeholder="买家留言：(必填)如果你充值的是燃气费、电费、水电费、电话费、加油卡等，请注明您要充值缴费的账号  (例如:  电话费：张三  13643713157)"></textarea>-->
+			<div class="textarea flex1"  placeholder="买家留言：(必填)如果你充值的是燃气费、电费、水电费、电话费、加油卡等，请注明您要充值缴费的账号  (例如:  电话费：张三  13643713157)"  contenteditable="true"></div>
+		</div>
+	</div>
+	<div class="confirmBott flex">
+		<p class="confirmBottP flex1"><label>共<span>1</span>件</label><label>合计:<span>155.00</span></label></p>
+		<a class="confirmBottA">去付款</a>
+	</div>	
+	
+	<!--支付详情-->
+	<div class="goodsShowBg"></div>
+	<div class="payDetail">
+		<div class="payDetailTit"><a class="closeIcon"></a><span>付款详情</span></div>
+		<ul class="payDetailUl">
+			<li>
+				<a class="flex flexmid"><span>账户</span><label class="flex1">13625164489</label></a>
+			</li>
+			<li>
+				<a class="flex flexmid"><span>账户余额</span><label class="flex1">433.00元</label></a>
+			</li>
+		</ul>
+		<div class="payDetailDiv"><a class="payDetailA flex flexmid"><span>需付款</span><label class="flex1">188.00元</label></a></div>
+		<div class="detailBtn payDetailBtn"><a class="loginBtn">确认付款</a></div>
+	</div>
+	<!--支付密码-->
+	<div class="payDetailM">
+		<div class="payDetailTit"><a class="p_back"></a><span>输入支付密码</span></div>
+		<div class="payDetailPsdBox">
+			<div class="payDetailPsd flex">
+				<input class="payDetailInp flex1" type="text"/>
+				<a>付款</a><!--输入密码后a变色，需要给a加上类名class="on"-->
+			</div>	
+		</div>
+		<div class="lforget payDetailforget">
+			<a class="lforgetPsd">忘记密码？</a>
+		</div>
+		<div class="msg">
+			<div class="address">1.下单后需到宏能办公地点(郑州市冠城回族区建正东方中心B座1011提货付款)</div>
+			<div class="tel">2.联系电话：0371-58613046</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(function(){
+		/*支付详情,支付密码的弹出 与隐藏*/
+		var payDetailH = $(".payDetail").height();
+		var payDetailW = $(".payDetail").width();
+		var payDetailMW = $(".payDetailM").width();
+		var payDetailMTop = $(".payDetailM").offset().top;
+		$(".payDetail").css("bottom",-payDetailH+"px");
+		//$(".payDetailM").css({height:payDetailH+"px",bottom:"0px",right:-payDetailMW+"px"/*,top:payDetailMTop+"px"*/});
+		$(".confirmBottA").on("click",function(){
+			$(".goodsShowBg").css({display:"inline-block",transition: "display 0.5s"});
+			$(".payDetail").css({bottom: "0px",transition: "bottom 0.5s"});
+		});
+		$(".payDetailBtn").on("click",function(){
+			$(".payDetail").css({bottom: "0px",left:-payDetailW+"px",transition: "left 0.5s"});
+			/*$(".payDetail").animate({marginLeft:-payDetailW},500);*/
+			$(".payDetailM").css({bottom:"0px",right:"0px",transition: "right 0.5s"});
+		});
+		$(".closeIcon").on("click",function(){
+			$(".payDetail").css({bottom: "0px",bottom:-payDetailH+"px",transition: "bottom 0.5s"});
+			$(".payDetailM").css({bottom:"0px",right:-payDetailMW+"px",transition: "right 0.5s"});
+			$(".goodsShowBg").css({display:"none",transition: "display 0.5s"});
+		});
+		$(".p_back").on("click",function(){
+			$(".payDetail").css({bottom: "0px",left:"0px",transition: "left 0.5s"});
+			$(".payDetailM").css({bottom:"0px",right:-payDetailMW+"px",transition: "right 0.5s"});
+		});
+		//检测密码输入到6-18时，付款按钮变色
+		$(".payDetailInp").keyup(function(){
+			var inpValue = $(".payDetailInp").val();
+			if(inpValue.length >= 6 && inpValue.length <= 18){
+				$(".payDetailPsd a").addClass("on");
+			}else{
+				$(".payDetailPsd a").removeClass("on");
+			}
+		});
+		//解决键盘弹出时把密码框顶上去的bug
+		var height1 = $(window).height();
+		var height2 = $('.payDetailM').height();
+		var height3 = $('.payDetail').height();		
+		$('.payDetailInp').bind('focus',function(){  
+            $('.payDetailM').css({'position':'fixed',"top":height1-height2});
+        }).bind('blur',function(){ 
+            $('.payDetailM').css({'position':'fixed','bottom':'0'});  
+        }); 
+	});
+</script>
+</html>

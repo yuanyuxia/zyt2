@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta content="telephone=no" name="format-detection">
+    <title>充值</title>
+    <link rel="stylesheet" href="../../libs/mui/css/mui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+</head>
+<body class="fpsdBody">
+	<div class="header">
+		<a class="h_back" href="finaManage.html"></a>
+	    <h3>充值</h3>
+	    <a class="h_delete" href="finaRechargeDetail.html">充值明细</a>
+	</div>
+	<div class="detailBox">
+		<form>
+			<ul class="detailUl rechargeUl marginTop">
+				<li>
+					<a class="agentTit rechargeA flex flexmid">
+						<h3>充值金额<span>（单位:元）</span></h3>
+		            </a>
+				</li>
+				<li class="rechargeNum flex clearfix"><a>188</a><a>376</a><a class="on">564</a><a>940</a><a>1880</a><a>3760</a></li>
+				<li class="rechargeMon flex">
+					<span class="rechargeMonS">¥</span><input class="rechargeMonInp flex1" type="text" placeholder="输入金额，不少于188元"/>
+				</li>
+			</ul>
+			<ul class="detailUl selectStyle  marginTop">
+				<li>
+					<a class="agentTit rechargeA flex flexmid">
+						<h3>支付方式</h3>
+		            </a>
+				</li>
+				<li>
+					<a class="detailA flex flexmid">						
+		                <i class="selectIcon active"></i>
+		                <img class="rechargeImg"  src="../../images/static/icons/icon_zhifubao.png"/>
+		                <span class="detailSpan flex1">支付宝支付</span>
+		            </a>
+				</li>
+				<li>
+					<a class="detailA detailABottom flex flexmid">						
+		                <i class="selectIcon"></i>
+		                <img  class="rechargeImg" src="../../images/static/icons/icon_weixin.png"/>
+		                <span class="detailSpan flex1">微信支付</span>
+		            </a>
+				</li>
+				<li class="marginTop">
+					<a class="agentTit rechargeA flex flexmid">
+						<h3>充值到银行卡</h3>
+		            </a>
+				</li>
+				<li>
+					<a class="detailA detailABottom flex flexmid">
+						<i class="selectIcon"></i>
+						<img  class="rechargeImg" src="../../images/static/icons/icon_gongshang.png"/>
+		                <span class="detailSpan">工商银行</span>
+		                <p class="detailP detailPInp flex1"><input  class="detailInp" type="text" placeholder="6228236525415631123"></p>
+		            </a>
+				</li>
+			</ul>
+			<div class="detailBtn"><a class="loginBtn">确定充值</a></div>
+			
+			<div class="shareRule">
+				<div class="shareRuleTit">
+					<span class="shareRuleTitX"></span><label class="shareRuleTitM">充值规则</label><span class="shareRuleTitX"></span>
+				</div>
+				<p class="shareRuleCon flex"><label>1、</label><span class="flex1">微信单笔最小充值金额188元</span> </p>
+				<p class="shareRuleCon flex"><label>2、</label><span class="flex1">支付宝单笔最小充值金额188元</span> </p>
+				<p class="shareRuleCon flex"><label>3、</label><span class="flex1">请周一到周三充值的用户充值到中国建设银行的卡号上充值到银行卡的用户，需要客户审核，一般第二天即可到账</span></p>
+				<p class="shareRuleCon flex"><label>4、</label><span class="flex1">如有其它疑问请咨询客服 客服电话：0371-56680000</span></p>
+			</div>
+		</form>
+	</div>
+	
+	<script type="text/javascript">
+		$(function(){
+			$(".rechargeNum a").on("click",function(){
+				$(this).addClass("on").siblings().removeClass("on");
+			});
+			$(".selectIcon").on("click",function(){
+				$(this).toggleClass("active").parents("li").siblings().find(".selectIcon").removeClass("active");
+			});
+		});
+	</script>
+</body>
+</html>

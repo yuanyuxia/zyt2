@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta content="telephone=no" name="format-detection">
+    <title>代理商奖励明细</title>
+    <link rel="stylesheet" href="../../libs/mui/css/mui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+    <style type="text/css">
+    	.mui-scroll-wrapper{top:44px;}
+    	.mui-table-view:after,.mui-table-view-cell:after {background-color: transparent;}
+    </style>
+</head>
+<body class="fpsdBody">
+	<div class="header">
+		<a class="h_back" href="perCenter.html"></a>
+	    <h3>代理商奖励明细</h3>
+	</div>
+	<div class="mui-content mui-scroll-wrapper"   id="pullrefresh">
+    	<div class="mui-scroll">
+    		<div class="finaMange">
+				<div class="finaMangeTit">
+					<h3>88.01</h3>
+					<span>今日收益（元）</span>
+				</div>
+				<div class="integ flex">
+					<div class="integBox flex1">
+						<a class="integ1">
+							<p>1880</p>
+							<label>本月收益</label>
+						</a>
+					</div>
+					<div class="integBox flex1">
+						<a class="integ1">
+							<p>3220</p>
+							<label>累计收益</label>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+			<div class="agentBox marginTop">
+				<div class="agentTit"><h3>您是郑州市代理商,您的奖励如下:</h3></div>
+				<div class="agentCon mui-table-view">
+					<a class="agentConA flex flexmid mui-table-view-cell">
+						<div class="agentConL flex1">
+							<span class="agentConLS">玛** &nbsp;&nbsp; 产生一笔订单交易</span>
+							<label class="agentConLL">17-02-03 &nbsp;&nbsp; 18:00</label>
+						</div>
+						<div class="agentConR">
+							<span class="agentConRS">+&nbsp;100.00</span>
+						</div>
+					</a>
+					<a class="agentConA flex flexmid mui-table-view-cell">
+						<div class="agentConL flex1">
+							<span class="agentConLS">玛** &nbsp;&nbsp; 产生一笔订单交易</span>
+							<label class="agentConLL">17-02-03 &nbsp;&nbsp; 18:00</label>
+						</div>
+						<div class="agentConR">
+							<span class="agentConRS">+&nbsp;100.00</span>
+						</div>
+					</a>
+					<a class="agentConA flex flexmid mui-table-view-cell">
+						<div class="agentConL flex1">
+							<span class="agentConLS">玛** &nbsp;&nbsp; 产生一笔订单交易</span>
+							<label class="agentConLL">17-02-03 &nbsp;&nbsp; 18:00</label>
+						</div>
+						<div class="agentConR">
+							<span class="agentConRS">+&nbsp;100.00</span>
+						</div>
+					</a>
+					<a class="agentConA flex flexmid mui-table-view-cell">
+						<div class="agentConL flex1">
+							<span class="agentConLS">玛** &nbsp;&nbsp; 产生一笔订单交易</span>
+							<label class="agentConLL">17-02-03 &nbsp;&nbsp; 18:00</label>
+						</div>
+						<div class="agentConR">
+							<span class="agentConRS">+&nbsp;100.00</span>
+						</div>
+					</a>
+					<a class="agentConA flex flexmid mui-table-view-cell">
+						<div class="agentConL flex1">
+							<span class="agentConLS">玛** &nbsp;&nbsp; 产生一笔订单交易</span>
+							<label class="agentConLL">17-02-03 &nbsp;&nbsp; 18:00</label>
+						</div>
+						<div class="agentConR">
+							<span class="agentConRS">+&nbsp;100.00</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="../../libs/mui/js/mui.min.js"></script>
+    <script>
+		mui.init({
+			pullRefresh: {
+				container: '#pullrefresh',
+				down: {
+					callback: pulldownRefresh
+				},
+				up: {
+					contentrefresh: '正在加载...',
+					callback: pullupRefresh
+				}
+			}
+		});
+		/**
+		 * 下拉刷新具体业务实现
+		 */
+		function pulldownRefresh() {
+			setTimeout(function() {
+				var table = document.body.querySelector('.mui-table-view');
+				var cells = document.body.querySelectorAll('.mui-table-view-cell');
+				for (var i = cells.length, len = i + 3; i < len; i++) {
+					var li = document.createElement('a');
+					li.className = 'agentConA flex flexmid mui-table-view-cell';
+					li.innerHTML = '<div class="agentConL flex1">'+
+										'<span class="agentConLS">玛** &nbsp;&nbsp; 产生一笔订单交易</span>'+
+										'<label class="agentConLL">17-02-03 &nbsp;&nbsp; 18:00</label>'+
+									'</div>'+
+									'<div class="agentConR">'+
+										'<span class="agentConRS">+&nbsp;101.00</span>'+
+									'</div>';
+					//下拉刷新，新纪录插到最前面；
+					table.insertBefore(li, table.firstChild);
+				}
+				mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+			}, 1500);
+		}	
+		var count = 0;
+		/**
+		 * 上拉加载具体业务实现
+		 */
+		function pullupRefresh() {
+			setTimeout(function() {
+				mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 3)); //参数为true代表没有更多数据了。
+				var table = document.body.querySelector('.mui-table-view');
+				var cells = document.body.querySelectorAll('.mui-table-view-cell');
+				for (var i = cells.length, len = i +5; i < len; i++) {
+					var li = document.createElement('li');
+					li.className = 'agentConA flex flexmid mui-table-view-cell';
+					li.innerHTML = '<div class="agentConL flex1">'+
+										'<span class="agentConLS">玛** &nbsp;&nbsp; 产生一笔订单交易</span>'+
+										'<label class="agentConLL">17-02-03 &nbsp;&nbsp; 18:00</label>'+
+									'</div>'+
+									'<div class="agentConR">'+
+										'<span class="agentConRS">+&nbsp;101.00</span>'+
+									'</div>';
+					table.appendChild(li);
+				}
+			}, 1500);
+		};
+		if (mui.os.plus) {
+			mui.plusReady(function() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+				}, 1000);
+
+			});
+		} /*else {
+			mui.ready(function() {
+				mui('#pullrefresh').pullRefresh().pullupLoading();
+			});
+		}*/
+	</script>
+</body>
+</html>

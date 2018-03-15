@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta content="telephone=no" name="format-detection">
+    <title>登录</title>
+    <link rel="stylesheet" href="../../libs/mui/css/mui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+    <style>
+        /*弹框*/
+  .iframe{
+    width: 80%;
+    height: 300px;
+     background-color:#fff;
+    position: absolute;
+    top:17%;
+    left: 50%;
+    margin-left:-40%;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 100;
+    /*display: none;*/
+}
+.cont{
+    width: 100%;
+    color:#333;
+  }
+
+.cont h3{
+    font-size: 2.2rem;
+   
+    margin:30px 0;
+
+}
+.cont p,.cont span{
+     font-size: 1.9rem;
+}
+.cont .tel{
+    display:inline-block;
+    margin: 25px auto;
+    width: 80%;
+    padding: 0 20px;
+    height: 44px;
+        line-height: 44px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.cont span{
+    display: block;
+    width: 80%;
+    height: 44px;
+    background-color: #db2a2a;
+    border:1px solid #db2a2a;
+    margin: 0 auto;
+    line-height: 44px;
+    border-radius: 5px;
+    color:#fff;
+}
+.mask{
+  z-index: 99;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    background: rgba(0,0,0,.4);
+    /*display: none;*/
+}
+
+    </style>
+</head>
+<body class="loginBody">
+	<div class="login">
+		<div class="header">
+		    <a class="h_back"></a>
+		    <h3>登录</h3>
+		</div>
+		<div class="loginCon">
+			<form class="loginForm">
+				<div class="lphone flex"><i class="lphone_icon"></i><input class="flex1" type="text" placeholder="请输入手机号"/></div>
+				<div class="lpsd flex"><i class="lpsd_icon"></i><input class="flex1" type="password" placeholder="请输入密码"/></div>
+				<a class="loginBtn" href="index.html">登录</a>
+			</form>			
+			<div class="lforget">
+				<a class="lregBtn fl" href="regist.html">快速注册</a>
+				<a class="lforgetPsd fr" href="forgetPsd.html">忘记密码？</a>
+			</div>
+		</div>
+          <!-- 弹框 -->
+         <div class="iframe">
+             <div class="cont">
+                 <h3>添加推荐人</h3>
+                 <p>请输入推荐人手机号码</p>
+                   <div class="tel flex"><input class="flex1" type="text" placeholder="请输入手机号"/></div>
+                 <span>保存</span>
+             </div>
+         </div>
+	</div>
+    <div class="mask"></div>
+    <script >       
+      $(function () {
+            $("").on("click",function(e){
+                $(this).parent().parent().parent().parent().parent().
+                find(".iframe").css({ "display": "block" });
+                    $(".mask").css({"display":"block"});
+                }),
+
+                $("").click(function(){
+                    $(".tanchukuang").css({ "display": "none"});
+                    $(".mask").css({"display":"none"});
+                })
+
+        }) 
+
+    </script>
+</body>
+</html><!--  -->

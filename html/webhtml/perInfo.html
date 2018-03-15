@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta content="telephone=no" name="format-detection">
+    <title>个人信息</title>
+    <link rel="stylesheet" href="../../libs/mui/css/mui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/upload.js"></script>
+</head>
+<body class="fpsdBody">
+	<div class="header">
+		<a class="h_back" href="perCenter.html"></a>
+	    <h3>个人信息</h3>
+	</div>
+	<div class="perInfoHead marginTop">
+		<div class="perInfoHeadCon clearfix" id="doc"><span class="fl">头像</span><label class="fr"><img class="fileImg" src="../../images/testimg/myphoto.png"/><input class="flex1" id="inp1" type="file"/></label></div>
+	</div>
+	<form class="perInfoDetail marginTop">
+		<a class="perConDiv flex"><span>手机号</span><input style="display: -webkit-box;" class="flex1" type="text" value="13643713157"/></a>
+		<a class="perConDiv flex"><span>ID号</span><input class="flex1" type="text" value="123456789"/></a>
+		<a class="perConDiv flex"><span>身份</span><input class="flex1" type="text" value="普通会员"/></a>
+		<a class="perConDiv flex"><span>姓名</span><input class="flex1" type="text" value="玛利亚"/></a>
+		<a class="perConDiv flex flexmid"><span>身份证号</span><input class="flex1" type="text" value="412829195610260132"/></a>
+	</form>
+	<form class="perInfoDetail marginTop">
+		<a class="perConDiv perConCode"><span>我的二维码</span><img class="perCode fr" src="../../images/testimg/erweima2.png"/></a>
+		<a class="perConDiv flex"><span>注册时间</span><input class="flex1" type="text" value="2017-02-06"/></a>
+		<a class="perConDiv flex" href="editAdress.html"><span>收货地址</span><input class="flex1" type="text" value="张三 15036616102 河南省"/><i class="perInfoAdress"></i></a>
+	</form>	
+	<!--点击出现放大二维码-->
+	<div class="goodsShowBg goodsShowBg1"></div>
+	<div class="bigCode">
+		<div class="header codeHeader">
+			<a class="h_back"></a>
+		    <h3>我的二维码</h3>
+		</div>
+		<div class="bigCodeBox">
+			<h3 class="flex flexmid">
+				<img src="../../images/testimg/myphoto.png"/>
+				<label class="flex1">苏姨玛利亚苏姨玛利亚苏姨玛利亚苏姨玛利亚</label>
+			</h3>
+			<span>
+				<img src="../../images/testimg/bigCode.png"/>
+				<label>扫描上方二维码开来加入我们吧！</label>
+			</span>				
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			/*头像预览*/
+			$("#inp1").change(function(){//----input
+	            var imgObj = $(".fileImg");//--img
+	            var inputObj=$("#inp1"); //----input
+	            var spanObj = $("#doc");//----外层
+	            showImg.showImage(this,imgObj,inputObj,spanObj);
+	            imgObj.css({"width":"60px","height":"60px"});
+      		});	
+      		/*二维码弹窗*/
+	        $(".perCode").on("click",function(){
+	        	$(".goodsShowBg").css({display:"inline-block",transition: "display 0.5s"});
+				$(".bigCode").css({display:"inline-block",transition: "display 0.5s"});
+	        });
+	        $(".codeHeader").on("click",function(){
+	        	console.log("111");
+	        	$(".goodsShowBg").css({display:"none",transition: "display 0.5s"});
+				$(".bigCode").css({display:"none",transition: "display 0.5s"});
+	        });
+  		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta content="telephone=no" name="format-detection">
+    <title>积分商城</title>
+    <link rel="stylesheet" href="../../libs/mui/css/mui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+    <script type="text/javascript" src="../../libs/touchSlider.js"></script>
+    <style type="text/css">
+    	.mui-table-view{margin-top: 0;overflow: hidden;}
+    	.mui-scroll-wrapper{top:44px !important;bottom: 50px;}
+    	.mui-table-view-cell{padding:0;}    		.mui-table-view:before,.mui-table-view:after,.mui-table-view-cell:after{background-color: transparent !important;}  		
+    	.mui-table-view-cell > a:not(.mui-btn) {position: relative;display:-webkit-box;overflow: hidden;margin:0; white-space:inherit; text-overflow: ellipsis;}
+	</style>
+</head>
+<body class="IndexBody">
+	<!--头部-->
+    <div class="header">
+	    <h3>积分商城</h3>
+	</div>
+	<div class="mui-content mui-scroll-wrapper"   id="pullrefresh">
+    	<div class="mui-scroll">
+    		<!--轮播图开始-->
+		    <div class="touchslider touchslider-demo">
+		        <div class="touchslider-viewport clearfix">
+		        	<div style="width:10000px">
+			            <div class="touchslider-item"><a href="goodsDetail.html"><img src="../../images/testimg/jifenbanner.png"></a></div>
+			            <div class="touchslider-item"><a href="goodsDetail.html"><img src="../../images/testimg/jifenbanner.png"></a></div>
+			            <div class="touchslider-item"><a href="goodsDetail.html"><img src="../../images/testimg/jifenbanner.png"></a></div>
+			            <div class="touchslider-item"><a href="goodsDetail.html"><img src="../../images/testimg/jifenbanner.png"></a></div>
+			        </div>
+		        </div>
+		        <div class="touchslider-nav">
+		            <a class="touchslider-nav-item touchslider-nav-item-current"></a>
+		        </div>
+		    </div>
+		    <script type="text/javascript">
+		        $(window).load(function () {
+		            var liO = $(".touchslider-item");
+		            var winH = $(window).width(); //计算屏幕宽度
+		            var liL = $(".touchslider-item").length; //计算轮播图片个数
+		            liO.width(winH);
+		            liO.find("img").width(winH);
+		            var imgH = liO.find("img").height();
+		            if(liL<=1){
+		                $(".touchslider-nav").hide();
+		            }else {//动态创建按钮
+		                for(var i=1; i<liL; i++){
+		                    $(".touchslider-nav").append("<a class='touchslider-nav-item'></a>");
+		                }
+		            }
+		
+		            $(".touchslider-demo").touchSlider({mouseTouch: true,autoplay: true});
+		
+		        });
+		    </script>
+		    <!--轮播图结束-->
+		    <!--热门积分商品开始-->
+		    <div class="hotscore marginTop">
+		    	<ul class="mui-table-view">
+		    		<li class="mui-table-view-cell">
+		    			<a class="flex" href="goodsDetail.html">
+							<span class="redwineimg">
+								<img src="../../images/testimg/redwine1.png"/>
+							</span>
+				            <div class="redwineBox flex1">
+				                <div>
+				                    <h3 class="wineTitle">圣芝红酒法国银奖干红圣芝红酒法国银奖干红圣芝红酒法国银奖干红</h3>
+				                    <p class="wineTips">原装进口葡萄干红 美容养颜</p>
+				                    <div class="wineAmount clearfix">
+			    						<label class="fl"><span>188</span>积分</label>
+			    						<div class="fr">月销量：240件</div>
+			    					</div>
+				                </div>
+				            </div>
+				        </a>
+		    		</li>
+		    		<li class="mui-table-view-cell">
+		    			<a class="flex" href="goodsDetail.html">
+							<span class="redwineimg">
+								<img src="../../images/testimg/redwine2.png"/>
+							</span>
+				            <div class="redwineBox flex1">
+				                <div>
+				                    <h3 class="wineTitle">圣芝红酒法国银奖干红</h3>
+				                    <p class="wineTips">原装进口葡萄干红 美容养颜</p>
+				                    <div class="wineAmount clearfix">
+			    						<label class="fl"><span>188</span>积分</label>
+			    						<div class="fr">月销量：240件</div>
+			    					</div>
+				                </div>
+				            </div>
+				        </a>
+		    		</li>
+		    		<li class="mui-table-view-cell">
+		    			<a class="flex" href="goodsDetail.html">
+							<span class="redwineimg">
+								<img src="../../images/testimg/redwine3.png"/>
+							</span>
+				            <div class="redwineBox flex1">
+				                <div>
+				                    <h3 class="wineTitle">圣芝红酒法国银奖干红圣芝红酒法国银奖</h3>
+				                    <p class="wineTips">原装进口葡萄干红 美容养颜</p>
+				                    <div class="wineAmount clearfix">
+			    						<label class="fl"><span>188</span>积分</label>
+			    						<div class="fr">月销量：240件</div>
+			    					</div>
+				                </div>
+				            </div>
+				        </a>
+		    		</li>
+		    		<li class="mui-table-view-cell">
+		    			<a class="flex" href="goodsDetail.html">
+							<span class="redwineimg">
+								<img src="../../images/testimg/redwine4.png"/>
+							</span>
+				            <div class="redwineBox flex1">
+				                <div>
+				                    <h3 class="wineTitle">圣芝红酒法国银奖干红</h3>
+				                    <p class="wineTips">原装进口葡萄干红 美容养颜</p>
+				                    <div class="wineAmount clearfix">
+			    						<label class="fl"><span>188</span>积分</label>
+			    						<div class="fr">月销量：240件</div>
+			    					</div>
+				                </div>
+				            </div>
+				        </a>
+		    		</li>
+		    		<li class="mui-table-view-cell">
+		    			<a class="flex">
+							<span class="redwineimg">
+								<img src="../../images/testimg/redwine5.png"/>
+							</span>
+				            <div class="redwineBox flex1">
+				                <div>
+				                    <h3 class="wineTitle">圣芝红酒法国银奖干红圣芝红酒法国银奖</h3>
+				                    <p class="wineTips">原装进口葡萄干红 美容养颜</p>
+				                    <div class="wineAmount clearfix">
+			    						<label class="fl"><span>188</span>积分</label>
+			    						<div class="fr">月销量：240件</div>
+			    					</div>
+				                </div>
+				            </div>
+				        </a>
+		    		</li>
+		    	</ul>		    	
+		    </div>
+		    <!--热门积分商品结束--> 
+		</div>
+	</div>
+    
+    <!--页脚-->
+    <div class="footer">
+        <ul class="flex">
+            <li class="flex1"><a href="index.html"><span></span>首页</a></li>
+            <li class="flex1"><a href="supermarket.html"><span></span>超市</a></li>
+            <li class="flex1 on"><a href="integral.html"><span></span>商城</a></li>
+            <li class="flex1"><a href="cart.html"><span></span>购物车</a></li>
+            <li class="flex1"><a href="perCenter.html"><span></span>我的</a></li>
+       </ul>
+    </div>
+    <script type="text/javascript" src="../../libs/mui/js/mui.min.js"></script>
+    <script>
+    	(function($, doc) {
+			$.init();
+			$.ready(function() {
+				/*解决mui默认阻止a标签跳转*/
+				mui('body').on('tap','a',function(){document.location.href=this.href;});
+			});
+		})(mui, document);
+		
+		mui.init({
+			pullRefresh: {
+				container: '#pullrefresh',
+				up: {
+					contentrefresh: '正在加载...',
+					callback: pullupRefresh
+				}
+			}
+		});
+		var count = 0;
+		/**
+		 * 上拉加载具体业务实现
+		 */
+		function pullupRefresh() {
+			setTimeout(function() {
+				mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 3)); //参数为true代表没有更多数据了。
+				var table = document.body.querySelector('.mui-table-view');
+				var cells = document.body.querySelectorAll('.mui-table-view-cell');
+				for (var i = cells.length, len = i +5; i < len; i++) {
+					var li = document.createElement('li');
+					li.className = 'mui-table-view-cell';
+					li.innerHTML = '<a class="flex">'+
+										'<span class="redwineimg">'+
+											'<img src="../../images/testimg/redwine2.png"/>'+
+										'</span>'+
+							            '<div class="redwineBox flex1">'+
+							                '<div>'+
+							                    '<h3 class="wineTitle">圣芝红酒法国银奖干红圣芝红酒</h3>'+
+							                    '<p class="wineTips">原装进口葡萄干红 美容养颜</p>'+
+							                    '<div class="wineAmount clearfix">'+
+						    						'<label class="fl"><span>188</span>积分</label>'+
+						    						'<div class="fr">月销量：240件</div>'+
+						    					'</div>'+
+							                '</div>'+
+							            '</div>'+
+							        '</a>';
+					table.appendChild(li);
+				}
+			}, 1500);
+		};
+		if (mui.os.plus) {
+			mui.plusReady(function() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+				}, 1000);
+
+			});
+		};
+	</script>
+</body>
+</html>

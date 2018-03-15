@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+	<meta content="telephone=no" name="format-detection">
+	<title>商品详情</title>
+	<link rel="stylesheet" href="../../libs/mui/css/mui.css">
+	<link rel="stylesheet" type="text/css" href="../../libs/swiper/swiper.min.css"/>
+	<link rel="stylesheet" href="../../css/base.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	<script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../../js/main.js"></script>
+	<script type="text/javascript" src="../../libs/touchSlider.js"></script>
+	<script type="text/javascript" src="../../libs/swiper/swiper.min.js"></script>
+	<script type="text/javascript" src="../../libs/mui/js/mui.min.js"></script>
+</head>
+<body class="IndexBody">
+	<!--头部-->
+	<div class="header goodsDHeader">
+		<a class="h_back"></a>
+		<h3><a class="goodsG on" href="#A">商品</a><a class="goodsD" href="#B">详情</a></h3>
+	</div>
+	<!--轮播图开始-->
+    <div class="swiper-container" id="A">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide"><img src="../../images/testimg/goods_pic1.png"></div>
+	        <div class="swiper-slide"><img src="../../images/testimg/goods_pic1.png"></div>
+	        <div class="swiper-slide"><img src="../../images/testimg/goods_pic1.png"></div>
+	    </div>
+	    <!--分页器 -->
+	    <div class="swiper-pagination"></div>
+	</div>
+    <!--轮播图结束-->
+    <div class="goodsTips">
+    	<p class="goodsTipsT">鲜御 烟台大樱桃车厘子 大樱桃 新鲜水果美早樱桃 2斤顺丰 现摘鲜御 烟台大樱桃车厘子 大樱桃 新鲜水果美早樱桃 2斤顺丰 现摘鲜御 烟台大樱桃车厘子 大樱桃 新鲜水果美早樱桃 2斤顺丰 现摘鲜御 烟台大樱桃车厘子 大樱桃 新鲜水果美早樱桃 2斤顺丰 现摘</p>
+    	<p class="goodsTipsA goodsTipsA1 hide"><small style="font-weight: bolder;">155 </small> <span>元</span></p><!--报单商品-->
+    	<p class="goodsTipsA goodsTipsA2"><small style="font-weight: bolder;">155 </small> <span>积分</span><label>价格 ¥24</label></p><!--积分商品-->
+    	<p class="goodsTipsX flex"><a class="flex1 goodsTipsX1">快递：0:00</a><a class="flex1 goodsTipsX2">月销1212</a><a class="flex1 goodsTipsX3">48小时内发货</a></p>
+    	<!--报单商品-->
+    	<!--<div class="goodsTipsY flex">
+    		<a><span>特惠</span><label>买一赠一</label><small class="flex1">下单就送价值240元的罗利干红1瓶</small></a>
+    		<a><span></span><label>自动排队</label><small class="flex1">交易成功后自动参与全国公排，出队还送积分</small></a>
+    	</div>-->
+    	<!--积分商品-->
+    	<div class="goodsTipsY flex">
+    		<a><span>特惠</span><label>积分累计</label><small class="flex1">累计消费满188积分即可再次参加全国公排</small></a>
+    	</div>
+    </div>
+    <!--图文详情开始-->
+    <div class="goodsDisplay" id="B">
+    	<p class="goodsDisplayT">图文详情</p>
+    	<div class="goodsDisplayImg">
+    		<img src="../../images/testimg/goods_pic2.png"/>
+    		<img src="../../images/testimg/goods_pic3.png"/>
+    		<img src="../../images/testimg/goods_pic4.png"/>
+    		<img src="../../images/testimg/goods_pic5.png"/>
+    	</div>
+    </div>
+    <!--图文详情结束-->
+    <!--加入购物车，立即购买-->
+	<div class="goodsBtn flex">
+		<a class="goodsBtn1 flex1">加入购物车</a>
+		<a class="goodsBtn2 flex1">立即购买</a>
+	</div>	    
+	<!--选择规格开始-->
+	<div class="goodsShowBg"></div>
+	<div class="good sShow">
+		<div class="goodsEtalon">
+			<div class="goodsEImg flex">
+				<img class="goodsSPic" src="../../images/testimg/guigepic.png"/>
+				<p class="goodsTitle flex1">
+					<a class="goodsTitleF">
+						<span class="goodsTitleJ fl">155 <small>积分</small></span>
+						<i class="closeIcon"></i>
+					</a>					
+					<label class="goodsTitleT">请选择产品参数规格 </label>					
+				</p>
+			</div>
+			<div class="goodsEtalonS">
+				<span class="goodsEtalonST">参数规格</span>
+				<label class="goodsEtalonSX"><a>蓝瓶</a><a>红瓶</a><a class="on">黑瓶</a></label>
+			</div>
+			<div class="goodsEtalonA clearfix">
+				<span class="goodsEtalonAT fl">数量</span>
+				<div class="mui-numbox cartN fr" data-numbox-min='0'>
+					<button class="mui-btn mui-btn-numbox-minus muiR" type="button">-</button>
+					<input id="test" class="mui-input-numbox" type="number" value="1" />
+					<button class="mui-btn mui-btn-numbox-plus muiR" type="button">+</button>
+				</div>
+			</div>			
+		</div>
+		<div class="goodsSureBtn"><a class="goodsQbtn" href="confirmIndent.html">确定</a></div>
+	</div>
+	<!--选择规格结束-->
+	<script type="text/javascript">
+		$(".goodsDHeader h3 a").on("click",function(){
+			$(this).addClass("on").siblings().removeClass("on");
+		});
+		//轮播图
+		var mySwiper = new Swiper ('.swiper-container', {
+		    loop: true,
+		    paginationType:'fraction',	    
+		    // 如果需要分页器
+		    pagination: '.swiper-pagination',
+		});  
+		//选择规格从底部滑出
+		$(".goodsEtalonSX a").on("click",function(){
+			$(this).addClass("on").siblings().removeClass("on");
+		});
+		
+		var goodsShowH = $(".goodsShow").height();
+		$(".goodsShow").css("bottom",-goodsShowH-13+"px");
+		$(".goodsBtn a").on("click",function(){
+			$(".goodsShowBg").css({display:"inline-block",transition: "display 0.5s"});
+			$(".goodsShow").css({bottom: "0px",transition: "bottom 0.5s"});
+		});
+		$(".goodsShowBg").on("click",function(){
+			$(".goodsShow").css({"bottom": -goodsShowH-13+"px",transition: "bottom 0.5s"});
+			$(".goodsShowBg").css({display:"none",transition: "display 0.5s"});
+		});
+		$(".goodsQbtn").on("click",function(){
+			$(".goodsShow").css({"bottom": -goodsShowH-13+"px",transition: "bottom 0.5s"});
+			$(".goodsShowBg").css({display:"none",transition: "display 0.5s"});
+		});
+		$(".closeIcon").on("click",function(){
+			$(".goodsShow").css({"bottom": -goodsShowH-13+"px",transition: "bottom 0.5s"});
+			$(".goodsShowBg").css({display:"none",transition: "display 0.5s"});
+		});
+	</script>
+
+</body>
+</html>

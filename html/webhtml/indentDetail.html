@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+	<meta content="telephone=no" name="format-detection">
+	<title>订单详情</title>
+	<link rel="stylesheet" href="../../libs/mui/css/mui.css">
+	<link rel="stylesheet" href="../../css/base.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	<script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../../js/main.js"></script>
+	<script type="text/javascript" src="../../libs/mui/js/mui.min.js"></script>
+</head>
+<body class="IndexBody">
+	<!--头部-->
+	<div class="header">
+		<a class="h_back" href="indent.html"></a>
+		<h3>订单详情</h3>
+	</div>
+	<div class="confirmIndent">		
+		<div class="indentAdress">
+			<a class="payBg">
+				<img src="../../images/static/payBg.png"/>
+				<span>等待买家收货！</span>
+			</a>
+			<a class="indentAdressD flex flexmid">
+				<p class="indentAdressDetail flex1">
+					<span>玛利亚 <small>13633563157</small></span>
+					<label class="indentAdressL">郑州市中原区高新区梧桐街玉兰街创业大厦</label>
+				</p>				
+			</a>
+		</div>
+		<!--<a class="indentBox indentBox1 marginTop flex flexmid">
+			<img class="cartImg" src="../../images/testimg/redwine1.png" />
+			<div class="redwineBox cartTips flex1">
+				<h3 class="wineTitle cartTitle">木瓜 新鲜水果 海南红心木瓜 木瓜 新鲜水果 海南红心木瓜木瓜 新鲜水果 海南红心木瓜</h3>
+				<p class="wineTips">5公斤 红芯木瓜</p>
+				<div class="wineAmount clearfix">
+					<label class="fl"><span>155</span>积分</label>
+					<div class="fr">X 1</div>
+				</div>
+			</div>
+		</a>-->
+		<a class="indentBox indentBox1 indentBox3 marginTop flex flexmid">
+			<img class="cartImg" src="../../images/testimg/hotscale_pic1.png" />
+			<div class="redwineBox cartTips flex1">
+				<h3 class="wineTitle">木瓜 新鲜水果 海南红心木瓜 木瓜 新鲜水果 海南红心木瓜木瓜 </h3>
+				<p class="wineTips">100元</p>				
+			</div>
+			<div class="cartTips cartTips2">
+				<p class="wineTips">188元</p>
+				<div>X 1</div>
+			</div>
+		</a>
+		<div class="indentMsg indentMsg1">
+			<div class="indentMsgBox flex">
+				<label class="indentMsgS">买家留言：</label>
+				<p class="textarea flex1"  contenteditable="true">包装给我包装好一点啊！亲！我的电话是123546314不要记错了，谢谢！</p>
+			</div>			
+		</div>
+		<a class="indentBox indentBox1 indentBox3 marginTop flex flexmid">
+			<img class="cartImg" src="../../images/testimg/hotscale_pic2.png" />
+			<div class="redwineBox cartTips flex1">
+				<h3 class="wineTitle">木瓜 新鲜水果 海南红心木瓜 木瓜 新鲜水果 海南红心木瓜木瓜 </h3>
+				<p class="wineTips">100元</p>				
+			</div>
+			<div class="cartTips cartTips2">
+				<p class="wineTips">188元</p>
+				<div>X 1</div>
+			</div>
+		</a>
+		<div class="indentMsg indentMsg1">
+			<div class="indentMsgBox flex">
+				<label class="indentMsgS">买家留言：</label>
+				<div class="textarea flex1"  contenteditable="true">电话费 电话号码：13643713157 王萌萌</div>
+			</div>			
+		</div>
+		<a class="indentBox indentBox1 indentBox3 marginTop flex flexmid">
+			<img class="cartImg" src="../../images/testimg/redwine1.png" />
+			<div class="redwineBox cartTips flex1">
+				<h3 class="wineTitle">木瓜 新鲜水果 海南红心木瓜 木瓜 新鲜水果 海南红心木瓜木瓜 </h3>
+				<p class="wineTips">100元<span class="wineTips2">赠送</span></p>				
+			</div>
+			<div class="cartTips cartTips2">
+				<p class="wineTips">240元</p>
+				<div>X 2</div>
+			</div>
+		</a>
+		<div class="cartTips3">
+			<p>共1件商品，合计：<span>376</span><label>元</label></p>
+		</div>
+		<div class="indentNum marginTop">
+			<span class="indentNumS">订单编号：2437870689913277</span>
+			<span class="indentNumS">下单时间：2017-02-05  08:07</span>
+			<span class="indentNumS">付款时间：2017-02-05  08:07</span>
+		</div>
+	</div>
+	<div class="payBtnBox">
+		<a class="payBtn1" href="logisticsDetail.html">查看物流</a>
+		<a class="payBtn2">确认收货</a>
+	</div>
+	<script>
+		$(function(){
+			/*解决键盘从底部滑出时，把固定定位的按钮顶上来的问题*/
+			changeHeight(".payBtnBox");
+		})	
+	</script>
+</body>
+</html>

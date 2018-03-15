@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta content="telephone=no" name="format-detection">
+    <title>明细搜索</title>
+    <link rel="stylesheet" href="../../libs/mui/css/mui.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/mui/css/mui.picker.min.css" />
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+    <script type="text/javascript" src="../../js/base.js"></script>
+</head>
+<body class="fpsdBody">
+	<div class="header">
+		<a class="h_back" href="perShareDetail.html"></a>
+	    <h3>明细搜索</h3>
+	</div>
+	<div class="detailBox">
+		<form>
+			<ul class="detailUl marginTop">
+				<li>
+					<a class="detailA flex flexmid" id="registDateBox1">
+		                <span class="detailSpan">注册开始时间</span>
+		                <p class="detailP flex1"><input id="registDate1"  class="detailInp" type="text" placeholder="请输入开始时间"></p>
+		                <i class="detailI"></i>
+		            </a>
+				</li>
+				<li>
+					<a class="detailA flex flexmid" id="registDateBox2">
+		                <span class="detailSpan">注册结束时间</span>
+		                <p class="detailP flex1"><input  id="registDate2"  class="detailInp" type="text" placeholder="请输入结束时间"></p>
+		                <i class="detailI"></i>
+		            </a>
+				</li>
+				<li>
+					<a class="detailA flex flexmid">
+		                <span class="detailSpan">姓名</span>
+		                <p class="detailP flex1"><input  class="detailInp" type="text" placeholder="请输入姓名"></p>
+		                <i class="detailI"></i>
+		            </a>
+				</li>
+				<li>
+					<a class="detailA flex flexmid">
+		                <span class="detailSpan">手机号</span>
+		                <p class="detailP flex1"><input  class="detailInp" type="text" placeholder="请输入手机号"></p>
+		                <i class="detailI"></i>
+		            </a>
+				</li>
+			</ul>
+			<div class="detailBtn"><a class="loginBtn">提交</a></div>
+		</form>
+	</div>
+	<script src="../../libs/mui/js/mui.min.js"></script>
+	<script src="../../libs/mui/js/mui.picker.min.js"></script>
+	<script type="text/javascript">		
+		//图片预览
+		$("#doc").change(function(){//----input
+			var imgObj = $(".fileImg");//--img
+			var inputObj=$("#doc"); //----input
+			var spanObj = $("#localImag");//----外层
+			showImg.showImage(this,imgObj,inputObj,spanObj);
+			imgObj.attr("src") == ""?imgObj.css("display","none"):imgObj.css("display","inline-block");
+	    });
+	    /*一级联动，二级联动，三级联动*/
+		(function($, doc) {
+			$.init();
+			$.ready(function() {
+				mui('body').on('tap', '.h_back', function() {document.location.href = this.href;});
+				/*注册开始选择*/
+				showPop.showDate("registDateBox1", "registDate1");
+				/*注册结束选择*/
+				showPop.showDate("registDateBox2", "registDate2");
+			});
+		})(mui, document);
+	</script>
+	
+</body>
+</html>

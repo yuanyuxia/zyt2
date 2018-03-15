@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta content="telephone=no" name="format-detection">
+    <title>我的消息</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+</head>
+<body class="fpsdBody">
+	<div class="header">
+		<a class="h_back" href="perCenter.html"></a>
+	    <h3>我的消息</h3>
+	</div>
+	<div class="detailBox">
+		<div class="perMsg">
+			<div class="perMsgTime">2017-05-07&nbsp;&nbsp;12:02:25</div>
+			<a class="perMsgA">
+				<span>恭喜您注册成功了</span>
+				<label class="flex">
+					<small class="flex1">请及时修改密码    ，为了你的安全保障，请不要在未知安全的设备上登录</small>
+					<i class="detailI"></i>
+				</label>
+			</a>
+			<div class="perMsgTime">2017-05-07&nbsp;&nbsp;12:02:25</div>
+			<a class="perMsgA">
+				<span>恭喜您注册成功了</span>
+				<label class="flex">
+					<small class="flex1">请及时修改密码    ，为了你的安全保障，请不要在未知安全的设备上登录</small>
+					<i class="detailI"></i>
+				</label>
+			</a>
+			<div class="perMsgTime">2017-05-07&nbsp;&nbsp;12:02:25</div>
+			<a class="perMsgA">
+				<span>恭喜您注册成功了</span>
+				<label class="flex">
+					<small class="flex1">请及时修改密码    ，为了你的安全保障，请不要在未知安全的设备上登录</small>
+					<i class="detailI"></i>
+				</label>
+			</a>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+	$(function(){
+		/*点击显示与隐藏*/
+		$(".perMsgA").on("click",function(){
+			if($(".detailI").hasClass("arrowDowm")){
+				$(this).find("small").css({"white-space": "nowrap","overflow": "hidden","text-overflow": "ellipsis"});			
+			}else{
+				$(this).find("small").css({"white-space": "inherit","overflow": "inherit","text-overflow": "inherit"});
+			}
+			$(this).find(".detailI").toggleClass("arrowDowm");			
+		});
+	});
+		
+	</script>
+</body>
+</html>

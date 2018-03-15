@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta content="telephone=no" name="format-detection">
+    <title>首页</title>
+    <link rel="stylesheet" href="../../libs/mui/css/mui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+    <script type="text/javascript" src="../../libs/touchSlider.js"></script>
+    <script type="text/javascript" src="../../libs/iscroll.js"></script>
+</head>
+<style type="text/css">
+	html {  
+    -ms-touch-action: none;  
+} 
+</style>
+<body class="IndexBody">
+	<!--头部-->
+	<div class="indexHeader">
+        <a class="indexLogo"><img src="../../images/static/icons/icon_logo.png"/></a>
+    </div>
+    <!--轮播图开始-->
+    <div class="touchslider touchslider-demo">
+        <div class="touchslider-viewport clearfix">
+        	<div style="width:10000px">
+				<div class="touchslider-item"><a href="http://v.youku.com/v_show/id_XMzQzOTkzNDg2OA==.html?spm=a2hww.20027244.m_250036.5~5!2~5~5!2~5~5~A"><img src="../../images/testimg/banner1.png"></a></div>
+				<div class="touchslider-item"><a href="goodsDetail.html"><img src="../../images/testimg/banner2.png"></a></div>
+				<div class="touchslider-item"><a href="goodsDetail.html"><img src="../../images/testimg/banner3.png"></a></div>
+				<div class="touchslider-item"><a href="goodsDetail.html"><img src="../../images/testimg/banner4.png"></a></div>
+	        </div>
+        </div>
+        <div class="touchslider-nav">
+            <a class="touchslider-nav-item touchslider-nav-item-current"></a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(window).load(function () {
+            var liO = $(".touchslider-item");
+            var winH = $(window).width(); //计算屏幕宽度
+            var liL = $(".touchslider-item").length; //计算轮播图片个数
+            liO.width(winH);
+            liO.find("img").width(winH);
+            var imgH = liO.find("img").height();
+            if(liL<=1){
+                $(".touchslider-nav").hide();
+            }else {//动态创建按钮
+                for(var i=1; i<liL; i++){
+                    $(".touchslider-nav").append("<a class='touchslider-nav-item'></a>");
+                }
+            }
+
+            $(".touchslider-demo").touchSlider({mouseTouch: true,autoplay: true});
+
+        });
+    </script>
+    <!--轮播图结束-->
+    
+    <!--新闻公告开始-->
+    <div class="news marginTop clearfix">
+    	<span class="fl"></span>
+    	<div id="FontScroll">
+    		<ul class="fl">
+	    		<li><i></i><a href="indexNotice.html">中意通188惠民工程重要通知！！！！</a></li>
+	    		<li><i></i><a href="indexNotice.html">188惠民商城互助创富平台致力于全民营销188惠民商城互助创富平台致力于全民营销188惠民商城互助创富平台致力于全民营销188惠民商城互助创富平台致力于全民营销</a></li>
+	    	</ul>
+    	</div>
+    	
+    </div>
+    <!--新闻公告结束-->
+    <!--热销报单产品开始-->
+    <div class="hotscale marginTop">
+    	<h3 class="hotTitle">热销报单产品</h3>
+    	<p class="hotTips">买一赠一  &nbsp;&nbsp; 买单送红酒</p>
+    	<div id="wrapper">
+    		<ul class="hotscaleUl scroll clearfix">
+	    		<li>
+	    			<a>
+	    				<img src="../../images/testimg/hotscale_pic1.png"/>燃气水单费
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a>
+	    				<img src="../../images/testimg/hotscale_pic2.png"/>中石化充值卡
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a>
+	    				<img src="../../images/testimg/hotscale_pic3.png"/>话费充值
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a>
+	    				<img src="../../images/testimg/hotscale_pic1.png"/>燃气水单费
+	    			</a>
+	    		</li>
+	    	</ul>
+    	</div>
+    	
+    </div>
+    <!--热销报单产品结束-->
+    <!--热门积分商品开始-->
+    <div class="hotscore marginTop">
+    	<h3 class="hotTitle">热销积分商品</h3>
+    	<p class="hotTips">跟着司机走  &nbsp;&nbsp; 吃亏不会有</p>
+    	<ul>
+    		<li>
+    			<a class="flex flexmid" href="goodsDetail.html">
+					<span class="redwineimg">
+						<img src="../../images/testimg/redwine1.png"/>
+					</span>
+		            <div class="redwineBox flex1">
+		                <div>
+		                    <h3 class="wineTitle">圣芝红酒法国银奖干红圣芝红酒法国银奖干红圣芝红酒法国银奖干红圣芝红酒法国银奖干红圣芝红酒法国银奖干红圣芝红酒法国银奖干红圣芝红酒法国银奖干红圣芝红酒法国银奖干红</h3>
+		                    <p class="wineTips">原装进口葡萄干红 美容养颜</p>
+		                    <div class="wineAmount clearfix">
+	    						<label class="fl"><span>188</span>积分</label>
+	    						<div class="fr">月销量：240件</div>
+	    					</div>
+		                </div>
+		            </div>
+		        </a>
+    		</li>
+    		<li>
+    			<a class="flex flexmid" href="goodsDetail.html">
+					<span class="redwineimg">
+						<img src="../../images/testimg/redwine2.png"/>
+					</span>
+		            <div class="redwineBox flex1">
+		                <div>
+		                    <h3 class="wineTitle">圣芝红酒法国银奖干红</h3>
+		                    <p class="wineTips">原装进口葡萄干红 美容养颜</p>
+		                    <div class="wineAmount clearfix">
+	    						<label class="fl"><span>188</span>积分</label>
+	    						<div class="fr">月销量：240件</div>
+	    					</div>
+		                </div>
+		            </div>
+		        </a>
+    		</li>
+    		<li>
+    			<a class="flex flexmid" href="goodsDetail.html">
+					<span class="redwineimg">
+						<img src="../../images/testimg/redwine3.png"/>
+					</span>
+		            <div class="redwineBox flex1">
+		                <div>
+		                    <h3 class="wineTitle">圣芝红酒法国银奖干红</h3>
+		                    <p class="wineTips">原装进口葡萄干红 美容养颜</p>
+		                    <div class="wineAmount clearfix">
+	    						<label class="fl"><span>188</span>积分</label>
+	    						<div class="fr">月销量：240件</div>
+	    					</div>
+		                </div>
+		            </div>
+		        </a>
+    		</li>
+    		<li>
+    			<a class="flex flexmid" href="goodsDetail.html">
+					<span class="redwineimg">
+						<img src="../../images/testimg/redwine4.png"/>
+					</span>
+		            <div class="redwineBox flex1">
+		                <div>
+		                    <h3 class="wineTitle">圣芝红酒法国银奖干红</h3>
+		                    <p class="wineTips">原装进口葡萄干红 美容养颜</p>
+		                    <div class="wineAmount clearfix">
+	    						<label class="fl"><span>188</span>积分</label>
+	    						<div class="fr">月销量：240件</div>
+	    					</div>
+		                </div>
+		            </div>
+		        </a>
+    		</li>
+    		<li>
+    			<a class="flex flexmid" href="goodsDetail.html">
+					<span class="redwineimg">
+						<img src="../../images/testimg/redwine5.png"/>
+					</span>
+		            <div class="redwineBox flex1">
+		                <div>
+		                    <h3 class="wineTitle ">圣芝红酒法国银奖干红</h3>
+		                    <p class="wineTips">原装进口葡萄干红 美容养颜</p>
+		                    <div class="wineAmount clearfix">
+	    						<label class="fl"><span>188</span>积分</label>
+	    						<div class="fr">月销量：240件</div>
+	    					</div>
+		                </div>
+		            </div>
+		        </a>
+    		</li>
+    	</ul>
+    </div>
+    <!--热门积分商品结束--> 
+    <!--页脚-->
+    <div class="footer">
+        <ul class="flex">
+            <li class="flex1 on"><a href="index.html"><span></span>首页</a></li>
+            <li class="flex1"><a href="supermarket.html"><span></span>超市</a></li>
+            <li class="flex1"><a href="integral.html"><span></span>商城</a></li>
+            <li class="flex1"><a href="cart.html"><span></span>购物车</a></li>
+            <li class="flex1"><a href="perCenter.html"><span></span>我的</a></li>
+       </ul>
+    </div>
+</body>
+<script type="text/javascript">
+	$(function () {   		
+   		//左右滚动
+		var Scroll = new iScroll('wrapper',{
+			hScrollbar:false,
+			vScrollbar:false,
+			hScroll: true,
+			vScrollbar: true,
+			lockDirection:true,
+			//解决左右滚动区域，上下不能滚动bug
+			onBeforeScrollStart: function ( e ) {
+		        if ( this.absDistX > (this.absDistY + 5 ) ) {
+		            e.preventDefault();
+		        }
+		    },
+		    //解决第一次无法滑动的问题
+		    onTouchEnd: function () {
+		        var self = this;
+		        if (self.touchEndTimeId) {
+		                clearTimeout(self.touchEndTimeId);
+		        }
+		
+		        self.touchEndTimeId = setTimeout(function () {
+		                self.absDistX = 0;
+		                self.absDistY = 0;
+		        }, 600);
+		    }
+		});
+		//滚动文字
+        (function($){
+            $.fn.FontScroll = function(options){
+                var d = {time: 3000,s: 'fontColor',num: 1}
+                var o = $.extend(d,options);
+
+                this.children('ul').addClass('line');
+                var _con = $('.line').eq(0);
+                var _conH = _con.height(); //滚动总高度
+                var _conChildH = _con.children().eq(0).height()*2;//一次滚动高度
+                var _temp = _conChildH;  //临时变量
+                var _time = d.time;  //滚动间隔
+                var _s = d.s;  //滚动间隔
+
+                _con.clone().insertAfter(_con);//初始化克隆
+
+                //样式控制
+                var num = d.num;
+                var _p = this.find('li');
+                var allNum = _p.length;
+
+                _p.eq(num).addClass(_s);
+
+                var timeID = setInterval(Up,_time);
+                this.hover(function(){clearInterval(timeID)},function(){timeID = setInterval(Up,_time);});
+
+                function Up(){
+                    _con.animate({marginTop: '-'+_conChildH});
+                    //样式控制
+                    _p.removeClass(_s);
+                    num += 1;
+                    _p.eq(num).addClass(_s);
+
+                    if(_conH == _conChildH){
+                        _con.animate({marginTop: '-'+_conChildH},"normal",over);
+                    } else {
+                        _conChildH += _temp;
+                    }
+                }
+                function over(){
+                    _con.attr("style",'margin-top:0');
+                    _conChildH = _temp;
+                    num = 1;
+                    _p.removeClass(_s);
+                    _p.eq(num).addClass(_s);
+                }
+            }
+        })(jQuery);
+
+        $('#FontScroll').FontScroll({time: 3000,num: 1});
+    });
+</script>
+</html>

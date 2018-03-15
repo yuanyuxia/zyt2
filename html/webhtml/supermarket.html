@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta content="telephone=no" name="format-detection">
+    <title>报单超市</title>
+    <link rel="stylesheet" href="../../libs/mui/css/mui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+    <script type="text/javascript" src="../../libs/touchSlider.js"></script>
+    <style type="text/css">
+    	.mui-table-view{margin-top: 0;}
+    	.mui-scroll-wrapper{top:44px !important;bottom: 50px;}
+    	.mui-table-view-cell{padding:0;}  		.mui-table-view:before,.mui-table-view:after,.mui-table-view-cell:after{background-color: transparent !important;} 
+    </style>
+</head>
+<body class="IndexBody">
+	<!--头部-->
+    <div class="header">
+	    <h3>报单超市</h3>
+	</div>
+	<div class="marketDisplay mui-content mui-scroll-wrapper"  id="pullrefresh">
+		<div class="mui-scroll">
+			<div class="mui-table-view">
+				<a class="mui-table-view-cell marketImg marginTop">
+					<img  class="marketImgB" src="../../images/testimg/market_pic3.png"/>
+					<div class="marketImgS">
+						<img src="../../images/testimg/market_pic0.png"/>
+					</div>
+				</a>
+				<a class="mui-table-view-cell marketImg marginTop">
+					<img  class="marketImgB" src="../../images/testimg/market_pic4.png"/>
+					<div class="marketImgS">
+						<img src="../../images/testimg/market_pic1.png"/>
+					</div>
+				</a>
+				<a class="mui-table-view-cell marketImg marginTop">
+					<img  class="marketImgB" src="../../images/testimg/market_pic5.png"/>
+					<div class="marketImgS">
+						<img src="../../images/testimg/market_pic2.png"/>
+					</div>
+				</a>
+				<a class="mui-table-view-cell marketImg marginTop">
+					<img  class="marketImgB" src="../../images/testimg/market_pic3.png"/>
+					<div class="marketImgS">
+						<img src="../../images/testimg/market_pic0.png"/>
+					</div>
+				</a>
+				<a class="mui-table-view-cell marketImg marginTop">
+					<img  class="marketImgB" src="../../images/testimg/market_pic4.png"/>
+					<div class="marketImgS">
+						<img src="../../images/testimg/market_pic1.png"/>
+					</div>
+				</a>
+			</div>			
+		</div>		
+	</div>
+	
+    <!--页脚-->
+    <div class="footer">
+        <ul class="flex">
+            <li class="flex1"><a href="index.html"><span></span>首页</a></li>
+            <li class="flex1 on"><a href="supermarket.html"><span></span>超市</a></li>
+            <li class="flex1"><a href="integral.html"><span></span>商城</a></li>
+            <li class="flex1"><a href="cart.html"><span></span>购物车</a></li>
+            <li class="flex1"><a href="perCenter.html"><span></span>我的</a></li>
+       </ul>
+    </div>
+    <script type="text/javascript" src="../../libs/mui/js/mui.min.js"></script>
+    <script>
+			mui.init({
+			pullRefresh: {
+				container: '#pullrefresh',
+				down: {
+					callback: pulldownRefresh
+				},
+				up: {
+					contentrefresh: '正在加载...',
+					callback: pullupRefresh
+				}
+			}
+		});
+		/**
+		 * 下拉刷新具体业务实现
+		 */
+		function pulldownRefresh() {
+			setTimeout(function() {
+				
+				mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+			}, 1500);
+		}	
+		var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 3)); //参数为true代表没有更多数据了。
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i = cells.length, len = i +5; i < len; i++) {
+						var a = document.createElement('a');
+						a.className = 'mui-table-view-cell marketImg marginTop';
+						a.innerHTML = '<img  class="marketImgB" src="../../images/testimg/market_pic3.png"/>'+
+										'<div class="marketImgS">'+
+											'<img src="../../images/testimg/market_pic0.png"/>'+
+										'</div>';
+						table.appendChild(a);
+					}
+				}, 1500);
+			}
+			if (mui.os.plus) {
+				mui.plusReady(function() {
+					setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().pullupLoading();
+					}, 1000);
+
+				});
+			}/* else {
+				mui.ready(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+				});
+			}*/
+		</script>
+</body>
+</html>
